@@ -1,5 +1,9 @@
+import React from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Navbar from "./Navbar/page";
+import Footer from "./Footer/page";
+// ✅ Import Footer Component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +19,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        {/* Navbar */}
+        <Navbar />  
+
+        {/* Page Content */}
+        <main className="flex-grow">{children}</main>
+
+        {/* Footer */}
+        <Footer />
+      </body>
     </html>
   );
 }
