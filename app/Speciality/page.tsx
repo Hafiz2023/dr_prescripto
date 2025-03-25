@@ -7,7 +7,7 @@ const specialities = [
   { name: "General physician", icon: "/general.svg", link: "/AllDoctors" },
   { name: "Gynecologist", icon: "/Gynecologist.svg", link: "/AllDoctors " },
   { name: "Dermatologist", icon: "/Dermatologist.svg", link: "/AllDoctors " },
-  { name: "Pediatricians", icon: "/pediatricians.svg", link: "/AllDoctors " },
+  { name: "Pediatricians", icon: "/Pediatricians.svg",link: "/AllDoctors " },
   { name: "Neurologist", icon: "/Neurologist.svg", link: "/AllDoctors" },
   {
     name: "Gastroenterologist",
