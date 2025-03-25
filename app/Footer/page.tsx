@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
           </motion.div>
           <p className="text-gray-600 mt-3 text-base">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
+            industry. Lorem Ipsum has been the industry standard dummy text
             ever since the 1500s.
           </p>
         </div>
@@ -27,18 +28,22 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold">COMPANY</h3>
           <ul className="mt-3 space-y-2 text-gray-600">
-            {["Home", "About us", "Delivery", "Privacy policy"].map(
-              (item, index) => (
-                <li key={index}>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 transition duration-300 ease-in-out"
-                  >
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
+            <li>
+              <Link
+                href="/"
+                className="hover:text-blue-500 transition duration-300 ease-in-out"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/AboutUs"
+                className="hover:text-blue-500 transition duration-300 ease-in-out"
+              >
+                About Us
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,19 +59,20 @@ const Footer = () => {
       <div className="text-center text-sm text-gray-500 border-t border-gray-300 mt-8 pt-4">
         Copyright 2024 @ Hafiz2023 - All Rights Reserved.
       </div>
-      {/* ✅ WhatsApp Button */}
+
+      {/* ✅ WhatsApp Floating Button */}
       <motion.a
         href="https://wa.me/923204338215"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 md:right-10  p-4 "
+        className="fixed bottom-6 right-6 md:right-10"
         initial={{ scale: 1 }}
         animate={{ scale: 1.2 }}
         transition={{ repeat: Infinity, repeatType: "mirror", duration: 1.5 }}
         whileHover={{ scale: 1.3 }}
         whileTap={{ scale: 0.9 }}
       >
-        <Image src="/whatapp.png" alt="WhatsApp" width={50} height={50} />
+        <Image src="/whatapp.png" alt="WhatsApp" width={60} height={60} />
       </motion.a>
     </footer>
   );
