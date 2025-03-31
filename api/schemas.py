@@ -41,8 +41,7 @@ class Order(OrderBase):
     class Config:
         orm_mode = True
         
-class OrderCreate(OrderBase):
-    pass    
+# Removed duplicate definition of OrderCreate
 
 class OrderUpdate(BaseModel):
     status: str
@@ -50,17 +49,13 @@ class OrderUpdate(BaseModel):
     class Config:
         orm_mode = True
         
-class OrderUpdate(OrderBase):
-    pass
+# Removed duplicate definition of OrderUpdate
 
-class OrderCreate(OrderBase):
-    pass
+# Removed duplicate definition of OrderCreate
 
-class PrescriptionCreate(PrescriptionBase):
-    pass
+# Removed duplicate definition of PrescriptionCreate
 
-class PrescriptionUpdate(PrescriptionBase):
-    pass
+# Removed duplicate definition of PrescriptionUpdate
 
 class PrescriptionCreate(PrescriptionBase):
     pass

@@ -62,7 +62,7 @@ const ContactUs = () => {
           </div>
 
           {/* Explore Jobs Button with Animation */}
-          <Link href="/careers">
+          <Link href="/Careers">
             <motion.button
               whileHover={{
                 scale: 1.05,

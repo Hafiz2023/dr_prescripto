@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Float, Boolean
+from sqlalchemy import Column, Engine, Integer, String, ForeignKey, Float, Boolean
 from sqlalchemy.orm import relationship
-from app.database import Base
+from database import Base
 
 class User(Base):
     __tablename__ = "users"
@@ -33,4 +33,4 @@ class Order(Base):
 User.orders = relationship("Order", back_populates="user")
 Prescription.orders = relationship("Order", back_populates="prescription")
 
-Base.metadata.create_all(bind=engine)   
+Base.metadata.create_all(bind=Engine)   
