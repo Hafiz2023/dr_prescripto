@@ -24,9 +24,21 @@ export default function HepatobiliarySurgery() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  const handleInputChange = (e: { target: { id: any; value: any; }; }) => {
+  interface FormData {
+    name: string;
+    phone: string;
+    email: string;
+    address: string;
+    doctor: string;
+    appointmentTime: string;
+    procedureType: string;
+  }
+
+  interface InputChangeEvent extends React.ChangeEvent<HTMLInputElement> {}
+
+  const handleInputChange = (e: InputChangeEvent) => {
     const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
+    setFormData((prev: FormData) => ({ ...prev, [id]: value }));
   };
 
   const handleSelectChange = (value: string, field: string) => {
