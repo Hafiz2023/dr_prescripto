@@ -24,7 +24,7 @@ export default function HepatobiliarySurgery() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { id: any; value: any; }; }) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
@@ -33,7 +33,7 @@ export default function HepatobiliarySurgery() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (Object.values(formData).every((val) => val.trim() !== "")) {
       setShowSuccess(true);
