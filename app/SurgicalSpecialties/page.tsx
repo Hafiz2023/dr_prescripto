@@ -107,7 +107,7 @@ export default function SurgicalSpecialties() {
                 borderImageSlice: 1,
               }}
             >
-              <div className="w-16 h-16 relative mb-3 bg-blue-500 dark:bg-slate-700 rounded-full p-2 flex items-center justify-center">
+              <div className="w-16 h-16 relative mb-3 bg-blue-600 dark:bg-slate-700 rounded-full p-2 flex items-center justify-center">
                 <Image
                   src={specialty.icon}
                   alt={specialty.name}
