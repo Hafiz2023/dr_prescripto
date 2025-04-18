@@ -86,7 +86,7 @@ export default function Urology() {
             <CheckCircle2 className="h-4 w-4" />
             <AlertTitle>Success!</AlertTitle>
             <AlertDescription>
-              Your urology consultation has been booked successfully. We'll contact you shortly.
+              Your urology consultation has been booked successfully. We ll contact you shortly.
             </AlertDescription>
           </Alert>
         </motion.div>

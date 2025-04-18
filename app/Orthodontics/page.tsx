@@ -84,7 +84,7 @@ export default function Orthodontics() {
             <CheckCircle2 className="h-4 w-4" />
             <AlertTitle>Success!</AlertTitle>
             <AlertDescription>
-              Your appointment has been booked successfully. We'll contact you shortly.
+              Your appointment has been booked successfully. Well contact you shortly.
             </AlertDescription>
           </Alert>
         </motion.div>
