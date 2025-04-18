@@ -1,15 +1,29 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { CheckCircle2, AlertCircle } from "lucide-react";
-import Image from "next/image";
 
 export default function HepatobiliarySurgery() {
   const [formData, setFormData] = useState({
@@ -21,31 +35,20 @@ export default function HepatobiliarySurgery() {
     appointmentTime: "",
     procedureType: ""
   });
+
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  interface FormData {
-    name: string;
-    phone: string;
-    email: string;
-    address: string;
-    doctor: string;
-    appointmentTime: string;
-    procedureType: string;
-  }
-
-  interface InputChangeEvent extends React.ChangeEvent<HTMLInputElement> {}
-
-  const handleInputChange = (e: InputChangeEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
-    setFormData((prev: FormData) => ({ ...prev, [id]: value }));
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   const handleSelectChange = (value: string, field: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (Object.values(formData).every((val) => val.trim() !== "")) {
       setShowSuccess(true);
@@ -66,15 +69,15 @@ export default function HepatobiliarySurgery() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 relative">
+    <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
       {showSuccess && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="fixed top-4 right-4 z-50 w-full max-w-md"
         >
-          <Alert variant="default">
-            <CheckCircle2 className="h-4 w-4" />
+          <Alert>
+            <CheckCircle2 className="h-4 w-4 text-green-600" />
             <AlertTitle>Success!</AlertTitle>
             <AlertDescription>
               Your consultation request has been submitted. We will contact you soon.
@@ -90,7 +93,7 @@ export default function HepatobiliarySurgery() {
           className="fixed top-4 right-4 z-50 w-full max-w-md"
         >
           <Alert variant="destructive">
-            <AlertCircle className="h-4 w-4" />
+            <AlertCircle className="h-4 w-4 text-red-600" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
               Please fill out all required fields.
@@ -100,12 +103,12 @@ export default function HepatobiliarySurgery() {
       )}
 
       <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }} className="text-center mb-16">
-        <motion.h1 className="text-4xl md:text-5xl font-bold text-blue-700 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-blue-700 mb-4">
           Advanced Hepatobiliary Surgery
-        </motion.h1>
-        <motion.p className="text-lg text-gray-600">
+        </h1>
+        <p className="text-lg text-gray-600">
           Specialized care for liver, pancreas, and biliary system disorders.
-        </motion.p>
+        </p>
       </motion.section>
 
       <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }} className="bg-blue-50 rounded-xl p-6 mb-16">
@@ -136,42 +139,41 @@ export default function HepatobiliarySurgery() {
 
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Our Hepatobiliary Surgeons</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="hover:shadow-xl transition-all duration-300 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="hover:shadow-xl transition-all duration-300">
             <div className="relative h-64 w-full">
               <Image
                 src="/Dr.-Muhammad-Imran-Ul-Hasan-2.webp"
                 alt="Dr. Adeel Hasan"
                 fill
-                className="object-cover"
+                className="object-cover rounded-t-xl"
               />
             </div>
             <CardHeader>
               <CardTitle className="text-blue-700">Dr. Adeel Hasan</CardTitle>
-              <CardDescription className="italic text-gray-600">
+              <CardDescription>
                 MBBS, FCPS, Fellowship in Hepatobiliary Surgery
               </CardDescription>
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 mb-3">
-                Expert in complex liver surgeries, bile duct injuries, and laparoscopic hepatobiliary procedures.
+                Expert in complex liver surgeries, bile duct injuries, and laparoscopic procedures.
               </p>
-              <p className="text-sm"><span className="font-medium">Techniques:</span> Laparoscopic, Liver resection, ERCP</p>
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-xl transition-all duration-300 h-full">
+          <Card className="hover:shadow-xl transition-all duration-300">
             <div className="relative h-64 w-full">
               <Image
                 src="/Dr-Umer-Nazir-2.webp"
-                alt="Dr. Mahnoor Rao"
+                alt="Dr. Umer Nazir"
                 fill
-                className="object-cover"
+                className="object-cover rounded-t-xl"
               />
             </div>
             <CardHeader>
-              <CardTitle className="text-blue-700">Dr. Umer Nazir </CardTitle>
-              <CardDescription className="italic text-gray-600">
+              <CardTitle className="text-blue-700">Dr. Umer Nazir</CardTitle>
+              <CardDescription>
                 MBBS, MS, Consultant Hepatobiliary Surgeon
               </CardDescription>
             </CardHeader>
@@ -179,7 +181,6 @@ export default function HepatobiliarySurgery() {
               <p className="text-gray-700 mb-3">
                 Specializes in hepatobiliary oncology and minimally invasive liver and pancreas procedures.
               </p>
-              <p className="text-sm"><span className="font-medium">Focus:</span> Cancer treatment, Laparoscopic techniques</p>
             </CardContent>
           </Card>
         </div>
@@ -207,29 +208,29 @@ export default function HepatobiliarySurgery() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Select Surgeon</Label>
-              <Select required value={formData.doctor} onValueChange={(value) => handleSelectChange(value, "doctor") }>
+              <Select value={formData.doctor} onValueChange={(value: string) => handleSelectChange(value, "doctor")}>
                 <SelectTrigger>
                   <SelectValue placeholder="Choose surgeon" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="dr-hasan">Dr. Adeel Hasan</SelectItem>
-                  <SelectItem value="dr-rao">Dr. Mahnoor Rao</SelectItem>
+                  <SelectItem value="Dr. Adeel Hasan">Dr. Adeel Hasan</SelectItem>
+                  <SelectItem value="Dr. Umer Nazir">Dr. Umer Nazir</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
               <Label>Procedure Type</Label>
-              <Select required value={formData.procedureType} onValueChange={(value) => handleSelectChange(value, "procedureType") }>
+              <Select value={formData.procedureType} onValueChange={(value: string) => handleSelectChange(value, "procedureType")}>
                 <SelectTrigger>
                   <SelectValue placeholder="Select procedure" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="liver">Liver Surgery</SelectItem>
-                  <SelectItem value="biliary">Biliary Surgery</SelectItem>
-                  <SelectItem value="pancreas">Pancreatic Surgery</SelectItem>
-                  <SelectItem value="gallbladder">Gallbladder Removal</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  <SelectItem value="Liver Surgery">Liver Surgery</SelectItem>
+                  <SelectItem value="Biliary Surgery">Biliary Surgery</SelectItem>
+                  <SelectItem value="Pancreatic Surgery">Pancreatic Surgery</SelectItem>
+                  <SelectItem value="Gallbladder Removal">Gallbladder Removal</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
                 </SelectContent>
               </Select>
             </div>
