@@ -50,11 +50,7 @@ const specialties = [
     icon: "/icon/Icons_Neurology-768x768.webp",
     link: "/NeurologyClinic",
   },
-  {
-    name: "Hepatobiliary Surgery",
-    icon: "/icon/Icons_Hepatobiliary-Surgery-1024x1024.webp",
-    link: "/HepatobiliarySurgery",
-  },
+
   {
     name: "General Surgery",
     icon: "/icon/Icons_General-Laparoscopic-Surgery-1024x1024.webp",
@@ -99,34 +95,33 @@ export default function SurgicalSpecialties() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-    {/* Specialties Grid */}
-<div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-  {specialties.map((specialty, index) => (
-    <Link href={specialty.link} key={index} passHref>
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="group h-48 sm:h-56 md:h-60 lg:h-64 flex flex-col items-center justify-center text-center rounded-xl border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-slate-800 shadow-md hover:shadow-xl transition-all cursor-pointer p-4"
-        style={{
-          borderImage: "linear-gradient(45deg, #00ff99, #6600ff) 1",
-          borderImageSlice: 1,
-        }}
-      >
-        <div className="w-16 h-16 relative mb-3 bg-blue-500 dark:bg-slate-700 rounded-full p-2 flex items-center justify-center">
-          <Image
-            src={specialty.icon}
-            alt={specialty.name}
-            fill
-            className="object-contain"
-          />
-        </div>
-        <h3 className="text-xs sm:text-sm font-semibold text-gray-800 dark:text-white">
-          {specialty.name}
-        </h3>
-      </motion.div>
-    </Link>
-  ))}
-</div>
-
+      {/* Specialties Grid */}
+      <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {specialties.map((specialty, index) => (
+          <Link href={specialty.link} key={index} passHref>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="group h-48 sm:h-56 md:h-60 lg:h-64 flex flex-col items-center justify-center text-center rounded-xl border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-slate-800 shadow-md hover:shadow-xl transition-all cursor-pointer p-4"
+              style={{
+                borderImage: "linear-gradient(45deg, #00ff99, #6600ff) 1",
+                borderImageSlice: 1,
+              }}
+            >
+              <div className="w-16 h-16 relative mb-3 bg-blue-500 dark:bg-slate-700 rounded-full p-2 flex items-center justify-center">
+                <Image
+                  src={specialty.icon}
+                  alt={specialty.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-800 dark:text-white">
+                {specialty.name}
+              </h3>
+            </motion.div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
