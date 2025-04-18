@@ -1,3 +1,4 @@
+import StatsSection from "./components/StatsSection";
 import Doctors from "./Doctors/page";
 import Footer from "./Footer/page";
 import Hero from "./Hero/page";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Speciality />
       <Doctors />
+      <StatsSection />
     </div>
   );
 }

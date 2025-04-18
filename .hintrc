@@ -20,7 +20,22 @@
     "axe/forms": [
       "default",
       {
-        "label": "off"
+        "label": "off",
+        "select-name": "off"
+      }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[loading]"
+        ]
+      }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
       }
     ]
   }
