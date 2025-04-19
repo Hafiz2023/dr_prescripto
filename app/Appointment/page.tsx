@@ -1,41 +1,70 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Appointment() {
   const [isFirstVisit, setIsFirstVisit] = useState<boolean | null>(null);
   const [formData, setFormData] = useState({
-    name: '',
-    contactNumber: '',
-    email: '',
-    address: '',
-    medicalDepartment: '',
-    specialtyType: '',
+    name: "",
+    contactNumber: "",
+    email: "",
+    address: "",
+    medicalDepartment: "",
+    specialtyType: "",
   });
 
   const medicalSpecialties = [
-    'Cardiology', 'Dermatology', 'Endocrinology', 
-    'Gastroenterology', 'Neurology', 'Pediatrics'
+    "Rheumatology Clinic",
+    "Psychology Clinic",
+    "Nutrition Clinic",
+    "Pulmonology Clinic",
+    "Family Medicine Clinic",
+    "Psychiatry Clinic",
+    "Physiotherapy Clinic",
+    "Paediatrics Neonatology",
+    "Neurology Clinic",
+    "Nephrology Clinic",
+    "Medical Oncology Clinic",
+    "Internal Medicine Clinic",
+    "Gastroenterology Clinic",
+    "Dermatology Clinic",
+    "Haematology Clinic",
+    "Cardiology Clinic",
+    "Anaesthesiology PainMedicine Clinic",
   ];
 
   const surgicalSpecialties = [
-    'General Surgery', 'Orthopedic Surgery', 'Cardiac Surgery',
-    'Neurosurgery', 'Plastic Surgery', 'Urology'
+    "Orthodontics",
+    "Urology",
+    "Surgical Oncology",
+    "Plastic Reconstructive Surgery",
+    "Obstetrics Gynaecology",
+    "Oral Maxillofacial Surgery",
+    "Paediatric Ophthalmology",
+    "Paediatrics Neonatology",
+    "Neurology Clinic",
+    "General LaparoscopicS Urological Surgery",
+    "ENT",
+    "Cardiac Surgery",
+    "Breast Surgery",
+    "Bariatric Surgery",
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the data to your backend
-    console.log('Form submitted:', { isFirstVisit, ...formData });
-    alert('Appointment request submitted successfully!');
+    console.log("Form submitted:", { isFirstVisit, ...formData });
+    alert("Appointment request submitted successfully!");
   };
 
   return (
@@ -43,7 +72,9 @@ export default function Appointment() {
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="p-8">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-gray-800">Evercare Hospital Appointment</h1>
+            <h1 className="text-2xl font-bold text-gray-800">
+              Evercare Hospital Appointment
+            </h1>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -55,14 +86,22 @@ export default function Appointment() {
                 <button
                   type="button"
                   onClick={() => setIsFirstVisit(true)}
-                  className={`px-4 py-2 rounded-md ${isFirstVisit === true ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+                  className={`px-4 py-2 rounded-md ${
+                    isFirstVisit === true
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-800"
+                  }`}
                 >
                   Yes
                 </button>
                 <button
                   type="button"
                   onClick={() => setIsFirstVisit(false)}
-                  className={`px-4 py-2 rounded-md ${isFirstVisit === false ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+                  className={`px-4 py-2 rounded-md ${
+                    isFirstVisit === false
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-800"
+                  }`}
                 >
                   No
                 </button>
@@ -70,7 +109,10 @@ export default function Appointment() {
             </div>
 
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Enter Your Name
               </label>
               <input
@@ -85,7 +127,10 @@ export default function Appointment() {
             </div>
 
             <div>
-              <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="contactNumber"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Enter Your Contact Number
               </label>
               <input
@@ -100,7 +145,10 @@ export default function Appointment() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Enter Your Email
               </label>
               <input
@@ -115,7 +163,10 @@ export default function Appointment() {
             </div>
 
             <div>
-              <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Enter Your Address
               </label>
               <input
@@ -136,15 +187,33 @@ export default function Appointment() {
               <div className="flex space-x-4 mb-4">
                 <button
                   type="button"
-                  onClick={() => setFormData(prev => ({ ...prev, specialtyType: 'medical' }))}
-                  className={`px-4 py-2 rounded-md ${formData.specialtyType === 'medical' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+                  onClick={() =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      specialtyType: "medical",
+                    }))
+                  }
+                  className={`px-4 py-2 rounded-md ${
+                    formData.specialtyType === "medical"
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-800"
+                  }`}
                 >
                   Medical Specialties
                 </button>
                 <button
                   type="button"
-                  onClick={() => setFormData(prev => ({ ...prev, specialtyType: 'surgical' }))}
-                  className={`px-4 py-2 rounded-md ${formData.specialtyType === 'surgical' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+                  onClick={() =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      specialtyType: "surgical",
+                    }))
+                  }
+                  className={`px-4 py-2 rounded-md ${
+                    formData.specialtyType === "surgical"
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-800"
+                  }`}
                 >
                   Surgical Specialties
                 </button>
@@ -152,7 +221,10 @@ export default function Appointment() {
 
               {formData.specialtyType && (
                 <div>
-                  <label htmlFor="medicalDepartment" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="medicalDepartment"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Select Medical Department
                   </label>
                   <select
@@ -164,13 +236,17 @@ export default function Appointment() {
                     required
                   >
                     <option value="">Select a department</option>
-                    {formData.specialtyType === 'medical' &&
-                      medicalSpecialties.map(specialty => (
-                        <option key={specialty} value={specialty}>{specialty}</option>
+                    {formData.specialtyType === "medical" &&
+                      medicalSpecialties.map((specialty) => (
+                        <option key={specialty} value={specialty}>
+                          {specialty}
+                        </option>
                       ))}
-                    {formData.specialtyType === 'surgical' &&
-                      surgicalSpecialties.map(specialty => (
-                        <option key={specialty} value={specialty}>{specialty}</option>
+                    {formData.specialtyType === "surgical" &&
+                      surgicalSpecialties.map((specialty) => (
+                        <option key={specialty} value={specialty}>
+                          {specialty}
+                        </option>
                       ))}
                   </select>
                 </div>

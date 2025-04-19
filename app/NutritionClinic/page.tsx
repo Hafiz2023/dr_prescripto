@@ -116,7 +116,7 @@ export default function NutritionClinic() {
       >
         <motion.h1 
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold text-green-600 mb-4"
+          className="text-4xl md:text-5xl font-bold text-blue-600 mb-4"
         >
           Personalized Nutrition & Wellness Plans
         </motion.h1>
@@ -133,9 +133,9 @@ export default function NutritionClinic() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="bg-green-50 rounded-xl p-6 mb-16"
+        className="bg-blue-50 rounded-xl p-6 mb-16"
       >
-        <h2 className="text-2xl font-semibold text-green-800 mb-4">Our Services</h2>
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">Our Services</h2>
         <p className="text-gray-700">
           We offer comprehensive nutrition services including weight management, 
           medical nutrition therapy, sports nutrition, pediatric nutrition, 
@@ -146,7 +146,7 @@ export default function NutritionClinic() {
 
       {/* Dietitians Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Our Nutrition Experts</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Our Nutrition Experts</h2>
         
         <motion.div
           initial={{ opacity: 0 }}
@@ -163,7 +163,7 @@ export default function NutritionClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Ms.-Ayesha-Saddiqa-2.webp" // Replace with your actual image path
+                  src="/Dr.-Shumaila-Zia-2.webp" // Replace with your actual image path
                   alt="Dr. Ayesha Saddiqa"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -171,7 +171,7 @@ export default function NutritionClinic() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-green-700">Dr. Ayesha Saddiqa</CardTitle>
+                <CardTitle className="text-blue-700">Dr. Ayesha Saddiqa</CardTitle>
                 <CardDescription className="italic text-gray-600">
                   RD, PhD in Nutritional Sciences, Certified Diabetes Educator
                 </CardDescription>
@@ -183,7 +183,7 @@ export default function NutritionClinic() {
                   strategies for sustainable dietary changes.
                 </p>
                 <p className="mt-4 font-medium">
-                  <span className="text-green-600">Specialties:</span> Diabetes, Metabolic Disorders, Weight Management
+                  <span className="text-blue-600">Specialties:</span> Diabetes, Metabolic Disorders, Weight Management
                 </p>
               </CardContent>
             </Card>
@@ -197,7 +197,7 @@ export default function NutritionClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Ms.-Hajra-Saleem-2.webp" // Replace with your actual image path
+                  src="/Dr.-Sadia-Sarwar-2.webp" // Replace with your actual image path
                   alt="Ms . Hajra Saleem"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -205,7 +205,7 @@ export default function NutritionClinic() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-green-700">Ms. Hajra Saleem</CardTitle>
+                <CardTitle className="text-blue-700">Ms. Hajra Saleem</CardTitle>
                 <CardDescription className="italic text-gray-600">
                   MS, RD, CSSD, Board Certified Specialist in Sports Dietetics
                 </CardDescription>
@@ -217,7 +217,7 @@ export default function NutritionClinic() {
                   achieve their fitness and athletic goals.
                 </p>
                 <p className="mt-4 font-medium">
-                  <span className="text-green-600">Specialties:</span> Sports Nutrition, Fitness Goals, Muscle Building
+                  <span className="text-blue-600">Specialties:</span> Sports Nutrition, Fitness Goals, Muscle Building
                 </p>
               </CardContent>
             </Card>
@@ -233,7 +233,7 @@ export default function NutritionClinic() {
         transition={{ duration: 0.5 }}
         className="bg-gray-50 rounded-xl p-8 shadow-sm"
       >
-        <h2 className="text-3xl font-bold text-center text-green-800 mb-8">Book A Consultation</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Book A Consultation</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
           <div className="space-y-2">
@@ -307,7 +307,7 @@ export default function NutritionClinic() {
           
           <Button 
             type="submit" 
-            className="w-full bg-green-600 hover:bg-green-700 transition-colors"
+            className="w-full bg-blue-600 hover:bg-blue-700 transition-colors"
             size="lg"
           >
             Book Consultation

@@ -105,7 +105,7 @@ export default function NeurologyClinic() {
       >
         <motion.h1 
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold text-purple-700 mb-4"
+          className="text-4xl md:text-5xl font-bold text-blue-700 mb-4"
         >
           Expert Neurological Care
         </motion.h1>
@@ -121,9 +121,9 @@ export default function NeurologyClinic() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="bg-purple-50 rounded-xl p-6 mb-16"
+        className="bg-blue-50 rounded-xl p-6 mb-16"
       >
-        <h2 className="text-2xl font-semibold text-purple-800 mb-4">Our Services</h2>
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">Our Services</h2>
         <p className="text-gray-700">
           We specialize in treating neurological conditions including stroke, epilepsy, migraine, multiple sclerosis, 
           Parkinson’s disease, Alzheimer’s disease, and neuropathies. Our experienced neurologists provide evidence-based, personalized care.
@@ -131,7 +131,7 @@ export default function NeurologyClinic() {
       </motion.section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-purple-800 mb-12">Neurology Specialists</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Neurology Specialists</h2>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -143,7 +143,7 @@ export default function NeurologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/dr-ahmed-khan.webp"
+                  src="/doctor/doc (4).webp"
                   alt="Dr. Ahmed Khan"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -151,7 +151,7 @@ export default function NeurologyClinic() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-purple-700">Dr. Ahmed Khan</CardTitle>
+                <CardTitle className="text-blue-700">Dr. Ahmed Khan</CardTitle>
                 <CardDescription className="italic text-gray-600">
                   MBBS, FCPS Neurology, Stroke Specialist
                 </CardDescription>
@@ -161,7 +161,7 @@ export default function NeurologyClinic() {
                   Dr. Khan specializes in stroke management, neurovascular disorders, and neurorehabilitation with years of clinical experience.
                 </p>
                 <p className="mt-4 font-medium">
-                  <span className="text-purple-700">Specialties:</span> Stroke, MS, Headaches
+                  <span className="text-blue-700">Specialties:</span> Stroke, MS, Headaches
                 </p>
               </CardContent>
             </Card>
@@ -171,7 +171,7 @@ export default function NeurologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/dr-sana-rafiq.webp"
+                  src="/Ms.-Ayesha-Saddiqa-2.webp"
                   alt="Dr. Sana Rafiq"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -179,7 +179,7 @@ export default function NeurologyClinic() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-purple-700">Dr. Sana Rafiq</CardTitle>
+                <CardTitle className="text-blue-700">Dr. Sana Rafiq</CardTitle>
                 <CardDescription className="italic text-gray-600">
                   MBBS, FCPS, Consultant Neurologist
                 </CardDescription>
@@ -189,7 +189,7 @@ export default function NeurologyClinic() {
                   Dr. Rafiq has expertise in epilepsy, neurodegenerative disorders, and pediatric neurology.
                 </p>
                 <p className="mt-4 font-medium">
-                  <span className="text-purple-700">Specialties:</span> Epilepsy, Alzheimer’s, Pediatric Neurology
+                  <span className="text-blue-700">Specialties:</span> Epilepsy, Alzheimer’s, Pediatric Neurology
                 </p>
               </CardContent>
             </Card>
@@ -204,7 +204,7 @@ export default function NeurologyClinic() {
         transition={{ duration: 0.5 }}
         className="bg-gray-50 rounded-xl p-8 shadow-sm"
       >
-        <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">Book A Consultation</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Book A Consultation</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
           <div className="space-y-2">
@@ -237,7 +237,7 @@ export default function NeurologyClinic() {
             <Label htmlFor="appointmentTime">Preferred Appointment Time</Label>
             <Input id="appointmentTime" type="datetime-local" required value={formData.appointmentTime} onChange={handleInputChange} />
           </div>
-          <Button type="submit" className="w-full bg-purple-700 hover:bg-purple-800" size="lg">
+          <Button type="submit" className="w-full bg-blue-700 hover:bg-blue-800" size="lg">
             Book Consultation
           </Button>
         </form>

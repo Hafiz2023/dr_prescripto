@@ -116,7 +116,7 @@ export default function PsychologyClinic() {
       >
         <motion.h1 
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold text-purple-600 mb-4"
+          className="text-4xl md:text-5xl font-bold text-blue-600 mb-4"
         >
           Compassionate Mental Health Care
         </motion.h1>
@@ -133,9 +133,9 @@ export default function PsychologyClinic() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="bg-purple-50 rounded-xl p-6 mb-16"
+        className="bg-blue-50 rounded-xl p-6 mb-16"
       >
-        <h2 className="text-2xl font-semibold text-purple-800 mb-4">Our Services</h2>
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">Our Services</h2>
         <p className="text-gray-700">
           We provide comprehensive psychological services including individual therapy, 
           couples counseling, anxiety and depression treatment, stress management, 
@@ -146,7 +146,7 @@ export default function PsychologyClinic() {
 
       {/* Therapists Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-purple-800 mb-12">Our Psychologists</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Our Psychologists</h2>
         
         <motion.div
           initial={{ opacity: 0 }}
@@ -171,7 +171,7 @@ export default function PsychologyClinic() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-purple-700">Dr. Sarah Johnson</CardTitle>
+                <CardTitle className="text-xl font-semibold text-blue-700">Dr. Sarah Johnson</CardTitle>
                 <CardDescription className="italic text-gray-600">
                   PhD in Clinical Psychology, Licensed Psychologist
                 </CardDescription>
@@ -183,7 +183,7 @@ export default function PsychologyClinic() {
                   anxiety, depression, and life transitions.
                 </p>
                 <p className="mt-4 font-medium">
-                  <span className="text-purple-600">Specialties:</span> Anxiety, Depression, Trauma
+                  <span className="text-blue-600">Specialties:</span> Anxiety, Depression, Trauma
                 </p>
               </CardContent>
             </Card>
@@ -205,7 +205,7 @@ export default function PsychologyClinic() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-purple-700">Michael Chen</CardTitle>
+                <CardTitle className="text-xl font-semibold text-blue-700">Michael Chen</CardTitle>
                 <CardDescription className="italic text-gray-600">
                   LMFT, Licensed Marriage and Family Therapist
                 </CardDescription>
@@ -217,7 +217,7 @@ export default function PsychologyClinic() {
                   through evidence-based approaches.
                 </p>
                 <p className="mt-4 font-medium">
-                  <span className="text-purple-600">Specialties:</span> Couples Therapy, Family Counseling
+                  <span className="text-blue-600">Specialties:</span> Couples Therapy, Family Counseling
                 </p>
               </CardContent>
             </Card>
@@ -233,7 +233,7 @@ export default function PsychologyClinic() {
         transition={{ duration: 0.5 }}
         className="bg-gray-50 rounded-xl p-8 shadow-sm"
       >
-        <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">Book An Appointment</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Book An Appointment</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
           <div className="space-y-2">
@@ -307,7 +307,7 @@ export default function PsychologyClinic() {
           
           <Button 
             type="submit" 
-            className="w-full bg-purple-600 hover:bg-purple-700 transition-colors"
+            className="w-full bg-blue-600 hover:bg-blue-700 transition-colors"
             size="lg"
           >
             Book Appointment

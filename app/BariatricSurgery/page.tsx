@@ -84,7 +84,7 @@ export default function BariatricSurgery() {
       >
         <motion.h1
           variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-          className="text-4xl md:text-5xl font-bold text-green-700 mb-4"
+          className="text-4xl md:text-5xl font-bold text-blue-700 mb-4"
         >
           Bariatric Surgery & Obesity Medicine
         </motion.h1>

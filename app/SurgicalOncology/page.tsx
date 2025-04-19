@@ -162,7 +162,7 @@ export default function SurgicalOncology() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/doctor/surgeon1.png" // Replace with your actual image path
+                  src="/doctor/doc (1).webp" // Replace with your actual image path
                   alt="Dr. Robert Langdon"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -195,7 +195,7 @@ export default function SurgicalOncology() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/doctor/surgeon2.png" // Replace with your actual image path
+                  src="/doctor/doc (2).webp" // Replace with your actual image path
                   alt="Dr. Elizabeth Wong"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -228,7 +228,7 @@ export default function SurgicalOncology() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/doctor/surgeon3.png" // Replace with your actual image path
+                  src="/doctor/doc (3).webp" // Replace with your actual image path
                   alt="Dr. Michael Rodriguez"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
