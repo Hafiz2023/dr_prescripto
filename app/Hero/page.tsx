@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
 
           {/* Appointment Button with Link */}
-          <Link href="/Speciality">
+          <Link href="/Appointment" className="block">
             <button className="mt-6 px-6 py-3 bg-white text-blue-500 font-medium rounded-full shadow-md hover:bg-gray-200 transition">
               Book appointment →
             </button>
