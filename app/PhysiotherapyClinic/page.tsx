@@ -100,7 +100,7 @@ export default function PhysiotherapyClinic() {
           <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }} className="relative">
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
-                <Image src="/Dr-Fahad-Rauf.webp" alt="Dr. Fahad Rauf" fill className="object-cover transition-all duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/doctor/doc (3).webp" alt="Dr. Fahad Rauf" fill className="object-cover transition-all duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <CardHeader>
                 <CardTitle className="text-blue-700">Dr. Fahad Rauf</CardTitle>
@@ -118,7 +118,7 @@ export default function PhysiotherapyClinic() {
           <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }} className="relative">
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
-                <Image src="/Dr-Saba-Nasir.webp" alt="Dr. Saba Nasir" fill className="object-cover transition-all duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/Dr.-Shumaila-Zia-2.webp" alt="Dr. Saba Nasir" fill className="object-cover transition-all duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <CardHeader>
                 <CardTitle className="text-blue-700">Dr. Saba Nasir</CardTitle>

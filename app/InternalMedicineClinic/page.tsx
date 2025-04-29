@@ -101,7 +101,7 @@ export default function InternalMedicineClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Muhammad-Oncology.webp"
+                  src="/doctor/doc7.png"
                   alt="Dr. Muhammad Aslam"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"

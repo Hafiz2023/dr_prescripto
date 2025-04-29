@@ -101,7 +101,7 @@ export default function AnaesthesiologyPainMedicineClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Neha-Anaesthesia.webp"
+                  src="/Dr.-Sadia-Sarwar-2.webp"
                   alt="Dr. Neha Kapoor"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -128,7 +128,7 @@ export default function AnaesthesiologyPainMedicineClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Arvind-Anaesthesia.webp"
+                  src="/Dr.-Muhammad-Imran-Ul-Hasan-2.webp"
                   alt="Dr. Arvind Singh"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -155,7 +155,7 @@ export default function AnaesthesiologyPainMedicineClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Priya-Anaesthesia.webp"
+                  src="/Dr-Mariam-Malik-2.webp"
                   alt="Dr. Priya Reddy"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"

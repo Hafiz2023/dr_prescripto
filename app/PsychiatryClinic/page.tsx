@@ -111,7 +111,7 @@ export default function PsychiatryClinic() {
           <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }} className="relative">
             <Card className="hover:shadow-xl overflow-hidden">
               <div className="relative h-64 w-full">
-                <Image src="/Dr-Fatima-Ali.webp" alt="Dr. Fatima Ali" fill className="object-cover hover:scale-105 transition-all duration-500" />
+                <Image src="/Dr.-Sadia-Sarwar-2.webp" alt="Dr. Fatima Ali" fill className="object-cover hover:scale-105 transition-all duration-500" />
               </div>
               <CardHeader>
                 <CardTitle className="text-blue-700">Dr. Fatima Ali</CardTitle>
@@ -130,7 +130,7 @@ export default function PsychiatryClinic() {
           <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }} className="relative">
             <Card className="hover:shadow-xl overflow-hidden">
               <div className="relative h-64 w-full">
-                <Image src="/Dr-Ahmed-Saeed.webp" alt="Dr. Ahmed Saeed" fill className="object-cover hover:scale-105 transition-all duration-500" />
+                <Image src="/doctor/doc (3).webp" alt="Dr. Ahmed Saeed" fill className="object-cover hover:scale-105 transition-all duration-500" />
               </div>
               <CardHeader>
                 <CardTitle className="text-blue-700">Dr. Ahmed Saeed</CardTitle>

@@ -101,8 +101,8 @@ export default function GastroenterologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Ayesha-Gastroenterology.webp"
-                  alt="Dr. Ayesha Siddiqui"
+                  src="/doctor/doc7.png"
+                  alt="Dr. Ameena Siddiqui"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

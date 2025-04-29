@@ -101,7 +101,7 @@ export default function DermatologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Nisha-Dermatology.webp"
+                  src="/doctor/doc9.png"
                   alt="Dr. Nisha Kapoor"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -128,7 +128,7 @@ export default function DermatologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Arjun-Dermatology.webp"
+                  src="/doctor/doc8.png"
                   alt="Dr. Arjun Patel"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -155,7 +155,7 @@ export default function DermatologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Preeti-Dermatology.webp"
+                  src="/doctor/doc5.png"
                   alt="Dr. Preeti Verma"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"

@@ -101,7 +101,7 @@ export default function HaematologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Vikram-Haematology.webp"
+                  src="/doctor/doc4.png"
                   alt="Dr. Vikram Malhotra"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -128,7 +128,7 @@ export default function HaematologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Anjali-Haematology.webp"
+                  src="/doctor/doc (1).webp"
                   alt="Dr. Anjali Deshpande"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -155,7 +155,7 @@ export default function HaematologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Rajat-Haematology.webp"
+                  src="/doctor/doc (2).webp"
                   alt="Dr. Rajat Sharma"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"

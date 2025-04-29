@@ -163,7 +163,7 @@ export default function PsychologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/therapist/therapist1.jpg" // Replace with your actual image path
+                  src="/Dr-Mariam-Malik-2.webp" // Replace with your actual image path
                   alt="Dr. Sarah Johnson"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -197,7 +197,7 @@ export default function PsychologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/therapist/therapist2.jpg" // Replace with your actual image path
+                  src="/doctor/doc (1).webp" // Replace with your actual image path
                   alt="Michael Chen"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"

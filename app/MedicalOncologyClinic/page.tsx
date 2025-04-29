@@ -133,7 +133,7 @@ export default function MedicalOncologyClinic() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-64 w-full">
-              <Image src="/dr-meena-sharma.webp" alt="Dr. Meena Sharma" fill className="object-cover transition-all duration-500 hover:scale-105" />
+              <Image src="/Dr.-Umaira-Anjum-2.webp" alt="Dr. Meena Sharma" fill className="object-cover transition-all duration-500 hover:scale-105" />
             </div>
             <CardHeader>
               <CardTitle className="text-red-700">Dr. Meena Sharma</CardTitle>
@@ -149,7 +149,7 @@ export default function MedicalOncologyClinic() {
 
           <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-64 w-full">
-              <Image src="/dr-arvind-patel.webp" alt="Dr. Arvind Patel" fill className="object-cover transition-all duration-500 hover:scale-105" />
+              <Image src="/doctor/doc3.png" alt="Dr. Arvind Patel" fill className="object-cover transition-all duration-500 hover:scale-105" />
             </div>
             <CardHeader>
               <CardTitle className="text-red-700">Dr. Arvind Patel</CardTitle>

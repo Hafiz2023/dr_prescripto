@@ -101,7 +101,7 @@ export default function CardiologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Sanjay-Cardiology.webp"
+                  src="/doctor/doc1.png"
                   alt="Dr. Sanjay Gupta"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -128,7 +128,7 @@ export default function CardiologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Priya-Cardiology.webp"
+                  src="/doctor/doc2.png"
                   alt="Dr. Priya Sharma"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
@@ -155,7 +155,7 @@ export default function CardiologyClinic() {
             <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/Dr-Rahul-Cardiology.webp"
+                  src="/doctor/doc3.png"
                   alt="Dr. Rahul Mehta"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"

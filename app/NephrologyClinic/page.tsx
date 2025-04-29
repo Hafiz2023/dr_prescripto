@@ -95,7 +95,7 @@ export default function NephrologyClinic() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-64 w-full">
-              <Image src="/dr-nida-ahsan.webp" alt="Dr. Nida Ahsan" fill className="object-cover transition-all duration-500 hover:scale-105" />
+              <Image src="/Dr.-Shumaila-Zia-2.webp" alt="Dr. Nida Ahsan" fill className="object-cover transition-all duration-500 hover:scale-105" />
             </div>
             <CardHeader>
               <CardTitle className="text-emerald-700">Dr. Nida Ahsan</CardTitle>
@@ -111,7 +111,7 @@ export default function NephrologyClinic() {
 
           <Card className="hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-64 w-full">
-              <Image src="/dr-hassan-ali.webp" alt="Dr. Hassan Ali" fill className="object-cover transition-all duration-500 hover:scale-105" />
+              <Image src="/doctor/doc (4).webp" alt="Dr. Hassan Ali" fill className="object-cover transition-all duration-500 hover:scale-105" />
             </div>
             <CardHeader>
               <CardTitle className="text-emerald-700">Dr. Hassan Ali</CardTitle>
