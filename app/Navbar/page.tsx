@@ -13,16 +13,20 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const aboutOptions = [
-    { name: "The Evercare", id: "evercare",link: "/" },
-    { name: "Evercare Hospital", id: "evercarehospital",link: "/" },
-    { name: "Vision Mission Values", id: "visionmission",link: "/" },
-    { name: "Management Team", id: "management",link: "/" },
-    { name: "The Compliance Helpline", id: "helpline",link: "/" },
+    { name: " Evercare", id: "evercare", link: "/" },
+    { name: "Evercare Hospital", id: "evercarehospital", link: "/" },
+    { name: "Vision Mission Values", id: "visionmission", link: "/" },
+    { name: "Management Team", id: "management", link: "/" },
+    { name: "The Compliance Helpline", id: "helpline", link: "/" },
   ];
 
   const doctorOptions = [
-    { name: "Medical Specialties", id: "medical",link: "/MedicalSpecialties" },
-    { name: "Surgical Specialties", id: "surgical",link: "/SurgicalSpecialties" },
+    { name: "Medical Specialties", id: "medical", link: "/MedicalSpecialties" },
+    {
+      name: "Surgical Specialties",
+      id: "surgical",
+      link: "/SurgicalSpecialties",
+    },
   ];
 
   const handleAboutChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

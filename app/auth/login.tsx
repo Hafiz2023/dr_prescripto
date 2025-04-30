@@ -7,7 +7,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, { email, password });
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/Register`, { email, password });
       alert("Login Successful");
     } catch (error) {
       alert("Login Failed");
