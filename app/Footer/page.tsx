@@ -70,10 +70,19 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/ContactUs"
+                  href="/HospitalDetails"
                   className="hover:text-blue-600 transition"
                 >
-                  Contact Us
+                   Hospital & Detail
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/ServicesHospital"
+                  className="hover:text-blue-600 transition"
+                >
+                  Services Hospital
                 </Link>
               </li>
             </ul>
