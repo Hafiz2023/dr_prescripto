@@ -73,7 +73,7 @@ const Footer = () => {
                   href="/HospitalDetails"
                   className="hover:text-blue-600 transition"
                 >
-                   Hospital & Detail
+                   Hospital  Details
                 </Link>
               </li>
 
