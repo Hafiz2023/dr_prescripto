@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Menu, X } from "lucide-react"; // Optional icons
-import { link } from "fs";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const router = useRouter();
@@ -13,30 +12,35 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const aboutOptions = [
-    { name: " Evercare", id: "evercare", link: "/" },
-    { name: "Evercare Hospital", id: "evercarehospital", link: "/" },
-    { name: "Vision Mission Values", id: "visionmission", link: "/" },
-    { name: "Management Team", id: "management", link: "/" },
-    { name: "The Compliance Helpline", id: "helpline", link: "/" },
+    { name: "Evercare", id: "evercare" },
+    { name: "Evercare Hospital", id: "evercarehospital" },
+    { name: "Vision Mission Values", id: "visionmission" },
+    { name: "Management Team", id: "Management" },
+    { name: "The Compliance Helpline", id: "helpline" },
   ];
 
   const doctorOptions = [
-    { name: "Medical Specialties", id: "medical", link: "/MedicalSpecialties" },
-    {
-      name: "Surgical Specialties",
-      id: "surgical",
-      link: "/SurgicalSpecialties",
-    },
+    { name: "Medical Specialties", id: "medical" },
+    { name: "Surgical Specialties", id: "surgical" },
   ];
 
   const handleAboutChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const id = e.target.value;
     setSelectedAbout(id);
-    if (id) {
-      router.push(`/aboutus#${id}`);
 
-      setMenuOpen(false); // close on mobile
+    if (id === "evercare") {
+      router.push("/Evercare");
+    } else if (id === "evercarehospital") {
+      router.push("/HospitalDetails");
+    } else if (id === "visionmission") {
+      router.push("/VisionMissionValues");
+    } else if (id === "Management") {
+      router.push("/Management");
+    } else if (id === "helpline") {
+      router.push("/ComplianceHelpline");
     }
+
+    setMenuOpen(false);
   };
 
   const handleDoctorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -47,18 +51,16 @@ const Navbar = () => {
     } else if (id === "surgical") {
       router.push("/SurgicalSpecialties");
     }
-    setMenuOpen(false); // close on mobile
+    setMenuOpen(false);
   };
 
   return (
     <nav className="bg-white shadow-md p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo or Brand */}
         <Link href="/" className="text-2xl font-bold text-sky-700">
           Evercare
         </Link>
 
-        {/* Toggle button for mobile */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-gray-800"
@@ -67,12 +69,8 @@ const Navbar = () => {
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 items-center">
-          <Link
-            href="/"
-            className="text-gray-800 hover:text-sky-600 font-medium"
-          >
+          <Link href="/" className="text-gray-800 hover:text-sky-600 font-medium">
             Home
           </Link>
 
@@ -102,53 +100,29 @@ const Navbar = () => {
             ))}
           </select>
 
-          <Link
-            href="/FallPreventionPage"
-            className="text-gray-800 hover:text-sky-600 font-medium"
-          >
+          <Link href="/FallPreventionPage" className="text-gray-800 hover:text-sky-600 font-medium">
             Patient Education
           </Link>
-          <Link
-            href="/Careers"
-            className="text-gray-800 hover:text-sky-600 font-medium"
-          >
+          <Link href="/Careers" className="text-gray-800 hover:text-sky-600 font-medium">
             Careers
           </Link>
-          <Link
-            href="/ContactUs"
-            className="text-gray-800 hover:text-sky-600 font-medium"
-          >
+          <Link href="/ContactUs" className="text-gray-800 hover:text-sky-600 font-medium">
             Contact Us
           </Link>
 
           <Link
             href="/Appointment"
             onClick={() => setMenuOpen(false)}
-            className="
-    inline-block
-    px-6 py-2
-    border-2 border-sky-600 text-sky-600
-    font-medium
-    rounded-lg
-    hover:bg-sky-600 hover:text-white
-    transition duration-200
-    text-center
-    md:inline-flex md:items-center
-  "
+            className="inline-block px-6 py-2 border-2 border-sky-600 text-sky-600 font-medium rounded-lg hover:bg-sky-600 hover:text-white transition duration-200 text-center md:inline-flex md:items-center"
           >
             Book Appointment
           </Link>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden mt-4 flex flex-col gap-4">
-          <Link
-            href="/"
-            onClick={() => setMenuOpen(false)}
-            className="text-gray-800 font-medium hover:text-sky-600"
-          >
+          <Link href="/" onClick={() => setMenuOpen(false)} className="text-gray-800 font-medium hover:text-sky-600">
             Home
           </Link>
 
@@ -178,42 +152,20 @@ const Navbar = () => {
             ))}
           </select>
 
-          <Link
-            href="/FallPreventionPage"
-            onClick={() => setMenuOpen(false)}
-            className="text-gray-800 font-medium hover:text-sky-600"
-          >
+          <Link href="/FallPreventionPage" onClick={() => setMenuOpen(false)} className="text-gray-800 font-medium hover:text-sky-600">
             Patient Education
           </Link>
-          <Link
-            href="/Careers"
-            onClick={() => setMenuOpen(false)}
-            className="text-gray-800 font-medium hover:text-sky-600"
-          >
+          <Link href="/Careers" onClick={() => setMenuOpen(false)} className="text-gray-800 font-medium hover:text-sky-600">
             Careers
           </Link>
-          <Link
-            href="/ContactUs"
-            onClick={() => setMenuOpen(false)}
-            className="text-gray-800 font-medium hover:text-sky-600"
-          >
+          <Link href="/ContactUs" onClick={() => setMenuOpen(false)} className="text-gray-800 font-medium hover:text-sky-600">
             Contact Us
           </Link>
 
           <Link
             href="/Appointment"
             onClick={() => setMenuOpen(false)}
-            className="
-    inline-block
-    px-6 py-2
-    border-2 border-sky-600 text-sky-600
-    font-medium
-    rounded-lg
-    hover:bg-sky-600 hover:text-white
-    transition duration-200
-    text-center
-    md:inline-flex md:items-center
-  "
+            className="inline-block px-6 py-2 border-2 border-sky-600 text-sky-600 font-medium rounded-lg hover:bg-sky-600 hover:text-white transition duration-200 text-center md:inline-flex md:items-center"
           >
             Book Appointment
           </Link>

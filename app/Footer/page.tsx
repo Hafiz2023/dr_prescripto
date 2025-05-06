@@ -86,6 +86,16 @@ const Footer = () => {
                     Services Hospital
                   </Link>
                 </li>
+                <ul>
+                <li>
+                  <Link
+                    href="/Management"
+                    className="hover:text-blue-600 transition"
+                  >
+                    Mangement
+                  </Link>
+                </li>
+              </ul>
               </ul>
             </ul>
           </div>
