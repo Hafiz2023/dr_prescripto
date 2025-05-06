@@ -8,73 +8,68 @@ const specialties = [
   {
     name: "Orthodontics",
     icon: "/SurgicalSpecialties/Icons_ORTHoDONTICS-1024x1024.webp",
-    link: "/Orthodontics",
+    link: "/SurgicalSpecialties/Orthodontics",
   },
   {
     name: "Urology",
     icon: "/SurgicalSpecialties/Icons_Urology-1024x1024.webp",
-    link: "/Urology",
+    link: "/SurgicalSpecialties/Urology",
   },
   {
     name: "SurgicalOncology",
     icon: "/SurgicalSpecialties/Icons_Surgical-Oncology-1024x1024.webp",
-    link: "/SurgicalOncology",
+    link: "/SurgicalSpecialties/SurgicalOncology",
   },
   {
     name: "Plastic Reconstructive Surgery",
     icon: "/SurgicalSpecialties/Icons_Plastic-Reconstructive-Surgery-1024x1024.webp",
-    link: "/PlasticReconstructiveSurgery",
+    link: "/SurgicalSpecialties/PlasticReconstructiveSurgery",
   },
   {
     name: "Obstetrics & Gynaecology",
     icon: "/SurgicalSpecialties/Icons_Obstetrics-Gynaecology-1024x1024.webp",
-    link: "/ObstetricsGynaecology",
+    link: "/SurgicalSpecialties/ObstetricsGynaecology",
   },
   {
     name: "Oral Maxillofacial Surgery",
     icon: "/icon/Icons_Oral-Maxillofacial-Surgery-1024x1024.webp",
-    link: "/OralMaxillofacialSurgery",
+    link: "/SurgicalSpecialties/OralMaxillofacialSurgery",
   },
   {
     name: "Paediatric & Ophthalmology",
     icon: "/icon/Icons_Paediatric-Ophthalmology-1024x1024.webp",
-    link: "/PaediatricOphthalmology",
+    link: "/SurgicalSpecialties/PaediatricOphthalmology",
   },
   {
     name: "Paediatrics & Neonatology",
     icon: "/icon/Icons_Paediatric-Surgery-1024x1024.webp",
-    link: "/PaediatricsNeonatology",
-  },
-  {
-    name: "Neurology",
-    icon: "/icon/Icons_Neurology-768x768.webp",
-    link: "/NeurologyClinic",
+    link: "/SurgicalSpecialties/PaediatricsNeonatology",
   },
 
   {
     name: "General Surgery",
     icon: "/icon/Icons_General-Laparoscopic-Surgery-1024x1024.webp",
-    link: "/GeneralLaparoscopicSurgery",
+    link: "/SurgicalSpecialties/GeneralLaparoscopicSurgery",
   },
   {
     name: "ENT",
     icon: "/icon/Icons_ENT-1024x1024.webp",
-    link: "/ENT",
+    link: "/SurgicalSpecialties/ENT",
   },
   {
     name: "Cardiac Surgery",
     icon: "/icon/Icons_Cardiothoracic-Vascular-Surgery-1024x1024.webp",
-    link: "/CardiacSurgery",
+    link: "/SurgicalSpecialties/CardiacSurgery",
   },
   {
     name: "Breast Surgery",
     icon: "/icon/Icons_Breast-Surgery-1024x1024.webp",
-    link: "/BreastSurgery",
+    link: "/SurgicalSpecialties/BreastSurgery",
   },
   {
     name: "Bariatric Surgery",
     icon: "/icon/Icons_Bariatric-Surgery-Obesity-Medicine-1024x1024.webp",
-    link: "/BariatricSurgery",
+    link: "/SurgicalSpecialties/BariatricSurgery",
   },
 ];
 
@@ -107,8 +102,10 @@ export default function SurgicalSpecialties() {
                 borderImageSlice: 1,
               }}
             >
-              <div className="w-16 h-16 relative mb-3 bg-blue-600
-               dark:bg-slate-700 rounded-full p-2 flex items-center justify-center">
+              <div
+                className="w-16 h-16 relative mb-3 bg-blue-600
+               dark:bg-slate-700 rounded-full p-2 flex items-center justify-center"
+              >
                 <Image
                   src={specialty.icon}
                   alt={specialty.name}

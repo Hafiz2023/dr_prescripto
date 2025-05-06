@@ -1,4 +1,5 @@
 "use client";
+import { link } from "fs";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,12 +17,14 @@ export default function HospitalDetails() {
       desc: "Comprehensive heart care with modern catheterization lab",
       icon: "❤️",
       slug: "cardiology",
+     
     },
     {
       title: "Oncology",
       desc: "Complete cancer care including chemotherapy",
       icon: "🦠",
       slug: "oncology",
+    
     },
     {
       title: "Orthopedics",
@@ -90,7 +93,7 @@ export default function HospitalDetails() {
               Book Appointment
             </Link>
             <Link
-              href="/services"
+              href="/ServicesHospital"
               className="bg-transparent border-2 border-white hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg hover:shadow-xl"
             >
               Our Services

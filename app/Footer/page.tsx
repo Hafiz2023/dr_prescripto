@@ -73,18 +73,20 @@ const Footer = () => {
                   href="/HospitalDetails"
                   className="hover:text-blue-600 transition"
                 >
-                   Hospital  Details
+                  Hospital Details
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  href="/ServicesHospital"
-                  className="hover:text-blue-600 transition"
-                >
-                  Services Hospital
-                </Link>
-              </li>
+              <ul>
+                <li>
+                  <Link
+                    href="/ServicesHospital"
+                    className="hover:text-blue-600 transition"
+                  >
+                    Services Hospital
+                  </Link>
+                </li>
+              </ul>
             </ul>
           </div>
         </div>
@@ -101,6 +103,14 @@ const Footer = () => {
               <FaEnvelope className="text-blue-500" />
               <span>adilamin374@gmail</span>
             </div>
+            
+              <Link
+                href="/ComplianceHelpline"
+                className="hover:text-blue-600 transition"
+              >
+                Compliance Helpline
+              </Link>
+        
           </div>
 
           <div className="border-t border-gray-300 pt-4">

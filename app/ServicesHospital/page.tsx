@@ -38,7 +38,10 @@ interface Service {
   technology?: string;
 }
 
-const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => {
+const ServiceCard: React.FC<{ service: Service; index: number }> = ({
+  service,
+  index,
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -95,7 +98,9 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
         </div>
         {service.specialists && (
           <div className="mb-4">
-            <h4 className="font-semibold text-gray-800 mb-2">Our Specialists:</h4>
+            <h4 className="font-semibold text-gray-800 mb-2">
+              Our Specialists:
+            </h4>
             <p className="text-gray-600">{service.specialists}</p>
           </div>
         )}
@@ -138,114 +143,130 @@ export default function ServicesHospital() {
   const medicalServices = [
     {
       title: "Cardiology",
-      description: "Comprehensive heart care with our state-of-the-art cardiac center featuring modern catheterization labs and non-invasive testing facilities.",
+      description:
+        "Comprehensive heart care with our state-of-the-art cardiac center featuring modern catheterization labs and non-invasive testing facilities.",
       icon: "❤️",
       image: "/cardiology.jpg",
+
       features: [
         "24/7 Cardiac Emergency Services",
         "Echocardiography (2D, 3D, Stress Echo)",
         "Angioplasty & Stenting",
-        "Pacemaker & ICD Implantation"
+        "Pacemaker & ICD Implantation",
       ],
-      specialists: "Board-certified cardiologists and cardiac surgeons with international training",
-      technology: "Latest Philips EPIQ CVx ultrasound systems and Siemens biplane cath lab"
+
+      specialists:
+        "Board-certified cardiologists and cardiac surgeons with international training",
+      technology:
+        "Latest Philips EPIQ CVx ultrasound systems and Siemens biplane cath lab",
     },
     {
       title: "Oncology",
-      description: "Multidisciplinary cancer care with personalized treatment plans combining chemotherapy, radiation therapy, and surgical oncology.",
+      description:
+        "Multidisciplinary cancer care with personalized treatment plans combining chemotherapy, radiation therapy, and surgical oncology.",
       icon: "🦠",
       image: "/oncology.jpg",
       features: [
         "Medical Oncology",
         "Radiation Therapy (IMRT, IGRT)",
         "Palliative Care Services",
-        "Cancer Screening Programs"
+        "Cancer Screening Programs",
       ],
-      specialists: "Oncologists, hematologists, and oncology surgeons with subspecialty expertise",
-      technology: "Varian TrueBeam linear accelerator and PET-CT imaging"
+      specialists:
+        "Oncologists, hematologists, and oncology surgeons with subspecialty expertise",
+      technology: "Varian TrueBeam linear accelerator and PET-CT imaging",
     },
     {
       title: "Neurology",
-      description: "Advanced neurological care for disorders of the brain, spine, and nervous system with cutting-edge diagnostic and treatment options.",
+      description:
+        "Advanced neurological care for disorders of the brain, spine, and nervous system with cutting-edge diagnostic and treatment options.",
       icon: "🧠",
       image: "/neurology.jpg",
       features: [
         "EEG & EMG/NCS Testing",
         "Stroke Center with 24/7 Intervention",
         "Epilepsy Monitoring Unit",
-        "Movement Disorders Clinic"
+        "Movement Disorders Clinic",
       ],
-      specialists: "Neurologists and neurosurgeons fellowship-trained in subspecialties",
-      technology: "3T MRI, video EEG monitoring, and neuro-navigation systems"
+      specialists:
+        "Neurologists and neurosurgeons fellowship-trained in subspecialties",
+      technology: "3T MRI, video EEG monitoring, and neuro-navigation systems",
     },
   ];
 
   const surgicalServices = [
     {
       title: "Orthopedics",
-      description: "Comprehensive orthopedic care including joint replacement, sports medicine, and trauma surgery with advanced rehabilitation services.",
+      description:
+        "Comprehensive orthopedic care including joint replacement, sports medicine, and trauma surgery with advanced rehabilitation services.",
       icon: "🦴",
       image: "/orthopedics.jpg",
       features: [
         "Robotic-Assisted Joint Replacement",
         "Arthroscopic Surgery",
         "Spine Surgery",
-        "Pediatric Orthopedics"
+        "Pediatric Orthopedics",
       ],
-      specialists: "Orthopedic surgeons with fellowship training in joint replacement and sports medicine",
-      technology: "MAKO robotic arm for precision joint replacement"
+      specialists:
+        "Orthopedic surgeons with fellowship training in joint replacement and sports medicine",
+      technology: "MAKO robotic arm for precision joint replacement",
     },
     {
       title: "General Surgery",
-      description: "Minimally invasive surgical solutions for a wide range of conditions using laparoscopic and robotic techniques.",
+      description:
+        "Minimally invasive surgical solutions for a wide range of conditions using laparoscopic and robotic techniques.",
       icon: "🔪",
       image: "/surgery.jpg",
       features: [
         "Laparoscopic Cholecystectomy",
         "Hernia Repair (Open & Laparoscopic)",
         "Bariatric Surgery",
-        "Colorectal Surgery"
+        "Colorectal Surgery",
       ],
       specialists: "General surgeons with advanced laparoscopic training",
-      technology: "Da Vinci Xi robotic surgical system"
+      technology: "Da Vinci Xi robotic surgical system",
     },
     {
       title: "ENT",
-      description: "Comprehensive ear, nose and throat care for both pediatric and adult patients with advanced diagnostic and surgical capabilities.",
+      description:
+        "Comprehensive ear, nose and throat care for both pediatric and adult patients with advanced diagnostic and surgical capabilities.",
       icon: "👂",
       image: "/ent.jpg",
       features: [
         "Hearing and Balance Center",
         "Endoscopic Sinus Surgery",
         "Head and Neck Oncology",
-        "Pediatric ENT Services"
+        "Pediatric ENT Services",
       ],
-      specialists: "ENT surgeons with subspecialty training in otology and rhinology",
-      technology: "CO2 laser and endoscopic sinus surgery equipment"
+      specialists:
+        "ENT surgeons with subspecialty training in otology and rhinology",
+      technology: "CO2 laser and endoscopic sinus surgery equipment",
     },
   ];
 
   const diagnosticServices = [
     {
       title: "Radiology",
-      description: "Advanced diagnostic imaging services using the latest technology for accurate diagnosis and treatment planning.",
+      description:
+        "Advanced diagnostic imaging services using the latest technology for accurate diagnosis and treatment planning.",
       features: [
         "3T MRI Scanning",
         "128-Slice CT Scanning",
         "Digital Mammography",
-        "Ultrasound (4D, Doppler)"
-      ]
+        "Ultrasound (4D, Doppler)",
+      ],
     },
     {
       title: "Laboratory",
-      description: "Full-service pathology and clinical laboratory offering comprehensive testing with rapid turnaround times.",
+      description:
+        "Full-service pathology and clinical laboratory offering comprehensive testing with rapid turnaround times.",
       features: [
         "Clinical Chemistry",
         "Hematology",
         "Microbiology",
-        "Histopathology"
-      ]
-    }
+        "Histopathology",
+      ],
+    },
   ];
 
   return (
@@ -298,7 +319,8 @@ export default function ServicesHospital() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-xl md:text-2xl text-blue-100 mb-8"
           >
-            Delivering exceptional patient care through advanced medical technology and expert specialists
+            Delivering exceptional patient care through advanced medical
+            technology and expert specialists
           </motion.p>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -338,10 +360,17 @@ export default function ServicesHospital() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-8" />
             <div className="prose-lg text-gray-600 max-w-4xl mx-auto text-left md:text-center">
               <p>
-                At Evercare Hospital Lahore, we offer a comprehensive range of medical and surgical services delivered by highly trained specialists using state-of-the-art technology. Our patient-centered approach ensures that each individual receives personalized care tailored to their specific needs.
+                At Evercare Hospital Lahore, we offer a comprehensive range of
+                medical and surgical services delivered by highly trained
+                specialists using state-of-the-art technology. Our
+                patient-centered approach ensures that each individual receives
+                personalized care tailored to their specific needs.
               </p>
               <p className="mt-4">
-                As a JCI-accredited facility, we maintain the highest international standards in healthcare delivery, patient safety, and clinical outcomes. Our multidisciplinary teams collaborate to provide seamless care across all specialties.
+                As a JCI-accredited facility, we maintain the highest
+                international standards in healthcare delivery, patient safety,
+                and clinical outcomes. Our multidisciplinary teams collaborate
+                to provide seamless care across all specialties.
               </p>
             </div>
           </motion.div>
@@ -357,22 +386,31 @@ export default function ServicesHospital() {
               {
                 title: "300+",
                 subtitle: "Specialists",
-                description: "Board-certified physicians across 40+ specialties"
+                description:
+                  "Board-certified physicians across 40+ specialties",
               },
               {
                 title: "24/7",
                 subtitle: "Emergency Care",
-                description: "Fully staffed emergency department with trauma center"
+                description:
+                  "Fully staffed emergency department with trauma center",
               },
               {
                 title: "95%",
                 subtitle: "Patient Satisfaction",
-                description: "Consistently high ratings for quality of care"
-              }
+                description: "Consistently high ratings for quality of care",
+              },
             ].map((stat, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-4xl font-bold text-blue-600 mb-2">{stat.title}</h3>
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">{stat.subtitle}</h4>
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                  {stat.title}
+                </h3>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                  {stat.subtitle}
+                </h4>
                 <p className="text-gray-600">{stat.description}</p>
               </div>
             ))}
@@ -402,7 +440,10 @@ export default function ServicesHospital() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6" />
             <div className="prose text-gray-600 max-w-3xl mx-auto">
               <p>
-                Our medical departments bring together renowned specialists and cutting-edge technology to provide comprehensive care for complex medical conditions. From preventive care to advanced treatments, we offer the full spectrum of medical services.
+                Our medical departments bring together renowned specialists and
+                cutting-edge technology to provide comprehensive care for
+                complex medical conditions. From preventive care to advanced
+                treatments, we offer the full spectrum of medical services.
               </p>
             </div>
           </motion.div>
@@ -440,7 +481,10 @@ export default function ServicesHospital() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6" />
             <div className="prose text-gray-600 max-w-3xl mx-auto">
               <p>
-                Our surgical teams perform thousands of procedures annually using minimally invasive and robotic-assisted techniques that reduce recovery times and improve outcomes. We maintain the highest standards of surgical safety and infection control.
+                Our surgical teams perform thousands of procedures annually
+                using minimally invasive and robotic-assisted techniques that
+                reduce recovery times and improve outcomes. We maintain the
+                highest standards of surgical safety and infection control.
               </p>
             </div>
           </motion.div>
@@ -478,7 +522,10 @@ export default function ServicesHospital() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6" />
             <div className="prose text-gray-600 max-w-3xl mx-auto">
               <p>
-                Our diagnostic services, managed in partnership with Islamabad Diagnostic Centre (IDC), provide accurate and timely results to support clinical decision-making. We utilize the latest generation equipment operated by certified technologists.
+                Our diagnostic services, managed in partnership with Islamabad
+                Diagnostic Centre (IDC), provide accurate and timely results to
+                support clinical decision-making. We utilize the latest
+                generation equipment operated by certified technologists.
               </p>
             </div>
           </motion.div>
@@ -506,7 +553,11 @@ export default function ServicesHospital() {
                 </h3>
                 <div className="prose text-gray-600 mb-8">
                   <p>
-                    Our diagnostic center offers a full spectrum of imaging and pathology services using internationally certified protocols. With rapid turnaround times and digital reporting, we ensure your healthcare providers receive results when they need them.
+                    Our diagnostic center offers a full spectrum of imaging and
+                    pathology services using internationally certified
+                    protocols. With rapid turnaround times and digital
+                    reporting, we ensure your healthcare providers receive
+                    results when they need them.
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -531,13 +582,13 @@ export default function ServicesHospital() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    href="/D.png"
+                    href="/"
                     className="px-6 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition-colors duration-300 text-center"
                   >
                     View Radiology Services
                   </Link>
                   <Link
-                    href="/pathology"
+                    href="/"
                     className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-colors duration-300 text-center"
                   >
                     View Pathology Services
@@ -570,7 +621,11 @@ export default function ServicesHospital() {
                 </h3>
                 <div className="prose text-gray-600 mb-8">
                   <p>
-                    Our CAP-accredited laboratory provides comprehensive testing services including clinical chemistry, hematology, microbiology, and histopathology. With automated systems and stringent quality controls, we deliver accurate results you can trust.
+                    Our CAP-accredited laboratory provides comprehensive testing
+                    services including clinical chemistry, hematology,
+                    microbiology, and histopathology. With automated systems and
+                    stringent quality controls, we deliver accurate results you
+                    can trust.
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -632,7 +687,9 @@ export default function ServicesHospital() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6" />
             <div className="prose text-gray-600 max-w-3xl mx-auto">
               <p>
-                Beyond our core services, we offer specialized programs that address specific healthcare needs with multidisciplinary approaches and exceptional expertise.
+                Beyond our core services, we offer specialized programs that
+                address specific healthcare needs with multidisciplinary
+                approaches and exceptional expertise.
               </p>
             </div>
           </motion.div>
@@ -647,28 +704,31 @@ export default function ServicesHospital() {
             {[
               {
                 title: "Heart Center",
-                description: "Comprehensive cardiac care from prevention to rehabilitation",
+                description:
+                  "Comprehensive cardiac care from prevention to rehabilitation",
                 icon: "❤️",
-                image: "/heart-center.jpg"
+                image: "/heart-center.jpg",
               },
               {
                 title: "Cancer Center",
-                description: "Multidisciplinary oncology care with tumor board review",
+                description:
+                  "Multidisciplinary oncology care with tumor board review",
                 icon: "🦠",
-                image: "/cancer-center.jpg"
+                image: "/cancer-center.jpg",
               },
               {
                 title: "Women's Health",
                 description: "Specialized care for women at all life stages",
                 icon: "👩",
-                image: "/womens-health.jpg"
+                image: "/womens-health.jpg",
               },
               {
                 title: "Pediatrics",
-                description: "Child-friendly environment with pediatric specialists",
+                description:
+                  "Child-friendly environment with pediatric specialists",
                 icon: "👶",
-                image: "/pediatrics.jpg"
-              }
+                image: "/pediatrics.jpg",
+              },
             ].map((program, index) => (
               <motion.div
                 key={index}
@@ -714,8 +774,8 @@ export default function ServicesHospital() {
               Ready to experience world-class healthcare?
             </h2>
             <p className="text-xl mb-10 max-w-3xl mx-auto">
-              Our patient care coordinators are available 24/7 to assist you with
-              appointments and inquiries.
+              Our patient care coordinators are available 24/7 to assist you
+              with appointments and inquiries.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
