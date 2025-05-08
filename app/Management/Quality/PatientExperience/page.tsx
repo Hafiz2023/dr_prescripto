@@ -256,7 +256,7 @@ export default function PatientExperience() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg" asChild>
-              <a href="/patient-feedback" className="font-semibold">
+              <a href="/Management/Quality/PatientExperience/PatientFeedback" className="font-semibold">
                 Provide Feedback
               </a>
             </Button>

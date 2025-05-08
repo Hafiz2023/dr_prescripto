@@ -96,6 +96,16 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
+              <ul>
+                <li>
+                  <Link
+                    href="/Management/Quality/PatientExperience/PatientFeedback"
+                    className="hover:text-blue-600 transition"
+                  >
+                    Patient Feedback
+                  </Link>
+                </li>
+              </ul>
               </ul>
             </ul>
           </div>
