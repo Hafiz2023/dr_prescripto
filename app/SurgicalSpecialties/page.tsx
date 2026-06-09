@@ -43,7 +43,7 @@ const specialties = [
   {
     name: "Paediatrics & Neonatology",
     icon: "/icon/Icons_Paediatric-Surgery-1024x1024.webp",
-    link: "/SurgicalSpecialties/PaediatricsNeonatology",
+    link: "/MedicalSpecialties/PaediatricsNeonatology",
   },
 
   {
